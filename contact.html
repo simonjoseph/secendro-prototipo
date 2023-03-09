@@ -154,6 +154,7 @@
           <ul class="page-breadcrumb">
             <li><a href="index.html">Home</a></li>
             <li>Contactos</li>
+            <div id="google_translate_element" class="boxTradutor"></div>
           </ul>
         </div>
       </div>
@@ -220,9 +221,13 @@
                 </div>
               </div>
               <ul>
-                <li><span>Endereço: </span>Rua da missão, Morro Bento 2 ao lado da UNIA</li>
+                <!-- <li><span>Endereço: </span>Rua da missão, Morro Bento 2 ao lado da UNIA</li>
                 <li><span>Telemovél: </span>(+244) 939343039  -  (+244) 993920505</li>
-                <li><span>Email: </span>geral@sencedrocomercial.com</li>
+                <li><span>Email: </span>info@sencedro.com.ao</li> -->
+                <li>Endereço: <span>Luanda, Angola, Rua direita do camama-Calemba II</span></li>
+                      <li>Telemovel Unitel: <span><a href="tel:+244939343039">+(244) 939343039</a></span></li>
+                      <li>Telemovel Movicel: <span><a href="tel:+244993920505">+(244) 993920505</a></span></li>
+                      <li>Email: <span><a href="mailto:info@sencedro.com.ao">info@sencedro.com.ao</a></span></li>
               </ul>
             </div>
           </div>
@@ -268,18 +273,10 @@
     <!-- End Contact Form Section -->
 
     <!--Map Section-->
-    <!-- <section class="map-section">
-      <div class="map-outer">
-        <div class="google-map" id="contact-google-map" data-map-lat="44.231172" data-map-lng="-76.485954"
-          data-icon-path="images/icons/map-marker.png" data-map-title="Alabama, USA" data-map-zoom="12" data-markers="{
-                    &quot;marker-1&quot;: [42.231172, -84.485954, &quot;<h4>Branch Office</h4><p>4/99 Alabama, USA</p>&quot;],
-                      &quot;marker-2&quot;: [44.231172, -76.485954, &quot;<h4>Branch Office</h4><p>4/99 Alabama, USA</p>&quot;],
-                      &quot;marker-3&quot;: [40.880550, -78.393705, &quot;<h4>Branch Office</h4><p>4/99 Pennsylvania, USA</p>&quot;]
-                  }">
-
-        </div>
+    <div class="gooleMaps" style=" background:#ccc;width:100%; ">
+      <div class="maps" style="border:0;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15767.727641917481!2d13.1839618!3d-8.8859229!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfd243c7e5c5f0662!2sSENCEDRO%2CLda!5e0!3m2!1spt-PT!2sao!4v1531427861718" height="500" width="100%" frameborder="0" style="border:0;" allowfullscreen></iframe>
       </div>
-    </section> -->
     <!--End Map Section-->
 
     <!-- Main Footer -->
@@ -301,10 +298,11 @@
                       <li><a href="#"><span class="fa fa-facebook-f"></span></a></li>
                       <li><a href="#"><span class="fa fa-instagram"></span></a></li>
                     </ul>
-                    <div class="text">Sit eit malis civibus kase iuvaret bandit no kec, ipsum volumus indis aissentias
-                      referrentur vix euno utamur.</div>
-                    <div class="copyright"><span>Secendro</span> &copy; Todos Direitos reservados. <br> by <a
-                        href="">uniTuenda</a>
+                    <div class="text">SENCEDRO, Lda. é uma empresa de direito 
+                      angolano, distribuidora de vários equipamentos para as empresas 
+                      e empreendedores que pretendem iniciar o seu próprio negócio.</div>
+                    <div class="copyright"><span>Secendro</span> &copy; 
+                      Todos Direitos reservados. <br> by <a href="">uniTuenda</a>
                     </div>
                   </div>
                 </div>
@@ -351,11 +349,10 @@
                   <div class="footer-widget contact-widget">
                     <h2>Contactos</h2>
                     <ul class="contact-list">
-                      <li>Endereço: <span>Rua da missão, Morro Bento 2 ao lado da UNIA</span></li>
+                      <li>Endereço: <span>Luanda, Angola, Rua direita do camama-Calemba II</span></li>
                       <li>Telemovel Unitel: <span><a href="tel:+244939343039">+(244) 939343039</a></span></li>
                       <li>Telemovel Movicel: <span><a href="tel:+244993920505">+(244) 993920505</a></span></li>
-                      <li>Email: <span><a
-                            href="mailto:geral@sencedrocomercial.com">geral@sencedrocomercial.com</a></span></li>
+                      <li>Email: <span><a href="mailto:info@sencedro.com.ao">info@sencedro.com.ao</a></span></li>
                     </ul>
                   </div>
                 </div>
@@ -395,6 +392,12 @@
   <script src="js/gmaps.js"></script>
   <script src="js/map-script.js"></script>
   <!--End Google Map APi-->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'pt', includedLanguages: 'en,pt', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+    }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>

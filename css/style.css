@@ -120,7 +120,7 @@ font-family: 'Montserrat', sans-serif;*/
 
 body {
 	font-family: 'Open Sans', sans-serif;
-	font-size:14px;
+	font-size: 1rem;
 	color:#777777;
 	line-height:1.7em;
 	font-weight:400;
@@ -453,7 +453,7 @@ img{
 
 .scroll-to-top:hover{
 	color:#ffffff;
-	background:#242f6c;
+	background: #fd6e00;
 }
 
 /*** 
@@ -508,7 +508,7 @@ img{
     color: #666666;
     font-weight: 500;
     line-height: 1.8em;
-	font-size:14px;
+	font-size: 1rem;
 	margin-top:15px !important;
 	
 }
@@ -1066,14 +1066,14 @@ img{
 
 .main-menu .navigation > li > ul{
 	position:absolute;
-	left:0px;
-	top:100%;
+	left: 0px;
+	top: 100%;
 	margin-top: 10px;
-	width:210px;
+	width: 310px;
 	z-index:100;
 	display:none;
 	opacity: 0;
-    visibility: hidden;
+  visibility: hidden;
 	padding: 10px 0px;
 	background: #ffffff;
 	text-align:left;
@@ -1125,7 +1125,7 @@ img{
 	line-height:24px;
 	font-weight:600;
 	font-size:14px;
-	text-transform:capitalize;
+	text-transform: uppercase;
 	color:#222222;
 	transition:all 300ms ease;
 	-moz-transition:all 300ms ease;
@@ -2159,7 +2159,7 @@ img{
 .services-block .inner-box .lower-box .text{
 	position:relative;
 	color:#666666;
-	font-size:14px;
+	font-size: 1rem;
 	margin-top:4px;
 	
 }
@@ -2593,7 +2593,7 @@ img{
 .story-block .inner-box .content-column .inner-column .text p{
 	position:relative;
 	color:#666666;
-	font-size:14px;
+	font-size: 1rem;
 	line-height:1.8em;
 	margin-bottom:20px;
 }
@@ -2675,7 +2675,7 @@ img{
 .story-block-two .inner-box .content-column .inner-column .text p{
 	position:relative;
 	color:#666666;
-	font-size:14px;
+	font-size: 1rem;
 	line-height:1.8em;
 	margin-bottom:20px;
 }
@@ -4302,7 +4302,7 @@ img{
 .architecture-section .title-box .text{
 	position:relative;
 	color:#666666;
-	font-size:14px;
+	font-size: 1rem;
 	line-height:1.9em;
 	
 }
@@ -4361,7 +4361,7 @@ img{
 .architecture-section .lower-content .architecture-info .info-inner .text{
 	position:relative;
 	color:#666666;
-	font-size:14px;
+	font-size: 1rem;
 	margin-top:4px;
 	
 }
@@ -4372,7 +4372,7 @@ img{
 
 .architecture-section .lower-content .image-column .inner-column{
 	position:relative;
-	margin-top:-90px;
+	margin-top: -60px;
 }
 
 .architecture-section .lower-content .image-column img{
@@ -5092,7 +5092,7 @@ img{
 .services-block-four .inner-box .lower-content .text p{
 	position:relative;
 	color:#666666;
-	font-size:14px;
+	font-size: 1rem;
 	line-height:1.9em;
 	margin-bottom:15px;
 }
@@ -5212,7 +5212,7 @@ img{
 .services-block-five .inner-box .content-column .text{
 	position:relative;
     color: #666666;
-    font-size: 14px;
+    font-size: 1rem;
     line-height: 1.9em;
 	
 }
@@ -7877,7 +7877,7 @@ img{
 
 .page-title .page-breadcrumb li{
 	position:relative;
-	font-size:14px;
+	font-size:1rem;
 	padding-right:10px;
 	margin-right:10px;
 	text-transform:capitalize;
