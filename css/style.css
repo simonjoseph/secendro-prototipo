@@ -759,7 +759,7 @@ img{
 .mdp-float-btn svg {
 	width: 1em;
 	height: 1em;
-	fill: var(--bg-body);
+	fill: #fff;
 	/* fill: var(--hmp-color); */
 	z-index: 2
 }
@@ -2266,7 +2266,7 @@ img{
 	-moz-transition: all 600ms ease;
 	-ms-transition: all 600ms ease;
 	-o-transition: all 600ms ease;
-	object-fit: cover;
+	/* object-fit: cover; */
 	transition: all 600ms ease;
 }
 
