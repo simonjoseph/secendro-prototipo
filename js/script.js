@@ -45,30 +45,30 @@
 		//});
 	}
 	
-	//Mobile Nav Hide Show
-	if($('.mobile-menu').length){
+	// //Mobile Nav Hide Show
+	// if($('.mobile-menu').length){
 		
-		var mobileMenuContent = $('.main-header .nav-outer .main-menu .navigation').html();
-		$('.mobile-menu .navigation').append(mobileMenuContent);
-		$('.sticky-header .navigation').append(mobileMenuContent);
-		$('.mobile-menu .close-btn').on('click', function() {
-			$('body').removeClass('mobile-menu-visible');
-		});
-		//Dropdown Button
-		$('.mobile-menu li.dropdown .dropdown-btn').on('click', function() {
-			$(this).prev('ul').slideToggle(500);
-		});
-		//Menu Toggle Btn
-		$('.mobile-nav-toggler').on('click', function() {
-			$('body').addClass('mobile-menu-visible');
-		});
+	// 	var mobileMenuContent = $('.main-header .nav-outer .main-menu .navigation').html();
+	// 	$('.mobile-menu .navigation').append(mobileMenuContent);
+	// 	$('.sticky-header .navigation').append(mobileMenuContent);
+	// 	$('.mobile-menu .close-btn').on('click', function() {
+	// 		$('body').removeClass('mobile-menu-visible');
+	// 	});
+	// 	//Dropdown Button
+	// 	$('.mobile-menu li.dropdown .dropdown-btn').on('click', function() {
+	// 		$(this).prev('ul').slideToggle(500);
+	// 	});
+	// 	//Menu Toggle Btn
+	// 	$('.mobile-nav-toggler').on('click', function() {
+	// 		$('body').addClass('mobile-menu-visible');
+	// 	});
 
-		//Menu Toggle Btn
-		$('.mobile-menu .menu-backdrop,.mobile-menu .close-btn').on('click', function() {
-			$('body').removeClass('mobile-menu-visible');
-		});
+	// 	//Menu Toggle Btn
+	// 	$('.mobile-menu .menu-backdrop,.mobile-menu .close-btn').on('click', function() {
+	// 		$('body').removeClass('mobile-menu-visible');
+	// 	});
 
-	}
+	// }
 	
 	
 	//Search Popup
@@ -658,9 +658,9 @@
    When document is loading, do
    ========================================================================== */
 	
-	$(window).on('load', function() {
-		handlePreloader();
-		sortableMasonry();
-	});	
+	// $(window).on('load', function() {
+	// 	handlePreloader();
+	// 	sortableMasonry();
+	// });	
 
 })(window.jQuery);

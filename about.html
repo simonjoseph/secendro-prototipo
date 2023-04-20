@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Secendro</title>
+	<title>Sencedro</title>
 
 	<!-- Stylesheets -->
 	<link href="css/bootstrap.css" rel="stylesheet">
@@ -60,15 +60,7 @@
 										<li><a href="index.html">Home</a>
 										</li>
 										<li class="dropdown"><a href="product.html">Produtos</a>
-											<ul>
-												<li><a href="ProductItem.html">Panificação</a></li>
-												<li><a href="ProductItem.html">Geladaria</a></li>
-												<li><a href="ProductItem.html">Sacolas</a></li>
-												<li><a href="ProductItem.html">Picolé</a></li>
-												<li><a href="ProductItem.html">Equipamentos para produção de chinelos</a></li>
-												<li><a href="ProductItem.html">Lavandaria Industrial</a></li>
-												<li><a href="ProductItem.html">Serpentinas</a></li>
-												<li><a href="ProductItem.html">Roulotes caravanas</a></li>
+											<ul class="product-name">
 											</ul>
 										</li>
 										<li class="current"><a href="about.html">Sobre nós</a></li>
@@ -148,7 +140,7 @@
 		<section class="page-title" style="background-image:url(images/banner.jpg)">
 			<div class="auto-container">
 				<div class="content">
-					<h2>Sobre a SECENDRO</h2>
+					<h2>Sencedro</h2>
 					<div class="text">Lorem ipsum &amp; dolor sit.</div>
 					<ul class="page-breadcrumb">
 						<li><a href="#">Home</a></li>
@@ -481,8 +473,8 @@
                     <div class="text">SENCEDRO, Lda. é uma empresa de direito 
                       angolano, distribuidora de vários equipamentos para as empresas 
                       e empreendedores que pretendem iniciar o seu próprio negócio.</div>
-                    <div class="copyright"><span>Secendro</span> &copy; 
-                      Todos Direitos reservados. <br> by <a href="">uniTuenda</a>
+                    <div class="copyright"><span>Sencedro</span> &copy; 
+                      Todos Direitos reservados. <br> by <a href="unituenda.ao">uniTuenda</a>
                     </div>
                   </div>
                 </div>
@@ -491,15 +483,7 @@
                 <div class="footer-column col-lg-5 col-md-6 col-sm-12">
                   <div class="footer-widget links-widget">
                     <h2>Nossos Produtos</h2>
-                    <ul class="footer-list">
-                      <li><a href="#">Panificação</a></li>
-                      <li><a href="#">Sacolas</a></li>
-                      <li><a href="#">Picolé</a></li>
-                      <li><a href="#">Geladaria</a></li>
-                      <li><a href="#">Serpentinas</a></li>
-                      <li><a href="#">Lavandaria Industrial</a></li>
-                      <li><a href="#">Roulotes caravans</a></li>
-                      <li><a href="#">Equipamentos de produção de chinelos</a></li>
+                    <ul class="footer-list" id="footer-prod">
                     </ul>
                   </div>
                 </div>
@@ -516,10 +500,10 @@
                   <div class="footer-widget links-widget">
                     <h2>Sitemap</h2>
                     <ul class="footer-list">
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">Produtos</a></li>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="product.html">Produtos</a></li>
                       <li><a href="about.html">Sobre nós</a></li>
-                      <li><a href="#">Contactos</a></li>
+                      <li><a href="contact.html">Contactos</a></li>
                     </ul>
                   </div>
                 </div>
@@ -584,6 +568,91 @@
 
 	<script>window.gtranslateSettings = {"default_language":"pt","native_language_names":true,"detect_browser_language":true,"languages":["pt","fr","es","it","af"],"wrapper_selector":".gtranslate_wrapper"}</script>
   <script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
+	<script src="js/axios.js"></script>
+  <script>
+
+    // const categoryContainer = document.getElementById("category");
+    const prodFooter = document.getElementById("footer-prod");
+    const productNames = document.querySelectorAll(".product-name");
+
+    const getCategoryData = () => {
+      axios.get('http://localhost:1337/api/categorias?fields=name')
+        .then(response => {
+          const category = response.data;
+  
+          console.log(category.data);
+  
+          category.data.forEach(element => {
+            console.log(element.attributes);
+            const categoryEl = document.createElement('li');
+            categoryEl.innerHTML = `
+            <a href="ProductItem.html?id=${element.id}">${element.attributes.name}</a>
+            `;
+  
+            // // categoryContainer.appendChild(categoryEl);
+  
+            productNames.forEach((productName) => {
+              productName.appendChild(categoryEl);
+            });
+  
+          });
+  
+  
+          if ($('.mobile-menu').length) {
+  
+            var mobileMenuContent = $('.main-header .nav-outer .main-menu .navigation').html();
+            $('.mobile-menu .navigation').append(mobileMenuContent);
+            $('.sticky-header .navigation').append(mobileMenuContent);
+            console.log(mobileMenuContent);
+            $('.mobile-menu .close-btn').on('click', function () {
+              $('body').removeClass('mobile-menu-visible');
+            });
+            //Dropdown Button
+            $('.mobile-menu li.dropdown .dropdown-btn').on('click', function () {
+              $(this).prev('ul').slideToggle(500);
+            });
+            //Menu Toggle Btn
+            $('.mobile-nav-toggler').on('click', function () {
+              $('body').addClass('mobile-menu-visible');
+            });
+  
+            //Menu Toggle Btn
+            $('.mobile-menu .menu-backdrop,.mobile-menu .close-btn').on('click', function () {
+              $('body').removeClass('mobile-menu-visible');
+            });
+  
+          }
+  
+        })
+        .catch(error => console.log(error));
+    };
+  
+    const getCategoryDataFooter = () => {
+      axios.get('http://localhost:1337/api/categorias?fields=name')
+        .then(response => {
+          const category = response.data;
+  
+          console.log(category.data);
+  
+          category.data.forEach(element => {
+            console.log(element.attributes);
+            const categoryEl = document.createElement('li');
+            categoryEl.innerHTML = `
+            <a href="ProductItem.html?id=${element.id}">${element.attributes.name}</a>
+            `;
+  
+            prodFooter.appendChild(categoryEl);
+  
+          });
+  
+        })
+        .catch(error => console.log(error));
+    };
+  
+    getCategoryData();
+  
+    getCategoryDataFooter();
+  </script>
 </body>
 
 </html>
